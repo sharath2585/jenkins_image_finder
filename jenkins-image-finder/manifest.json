@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Jenkins Image Finder",
+  "version": "1.0.0",
+  "description": "Find the Jenkins branch and build behind a Docker image using your signed-in tab.",
+  "permissions": ["activeTab", "scripting"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Find a Jenkins image"
+  }
+}

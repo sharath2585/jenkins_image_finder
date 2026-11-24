@@ -1,0 +1,34 @@
+:root { color-scheme: light; font: 16px/1.5 system-ui, sans-serif; color: #172b45; background: #f2f5fa; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+main { max-width: 980px; margin: 48px auto; padding: 0 24px; }
+header { margin-bottom: 24px; }
+h1 { font-size: clamp(2rem, 5vw, 2.8rem); letter-spacing: -.04em; margin: 6px 0; }
+h2 { overflow-wrap: anywhere; margin: 10px 0; }
+header p, .hint, footer { color: #53657a; }
+.eyebrow { color: #1453a1; font-size: .75rem; font-weight: 750; letter-spacing: .12em; }
+aside { padding: 14px 18px; border: 1px solid #a7c9eb; background: #e9f3ff; border-radius: 10px; margin-bottom: 22px; overflow-wrap: anywhere; }
+form, .result { background: white; padding: 26px; border: 1px solid #d7e0ec; border-radius: 14px; box-shadow: 0 4px 18px #18385a08; }
+label { display: block; font-weight: 650; margin-bottom: 7px; }
+input:not([type=checkbox]) { width: 100%; padding: 12px; font: inherit; border: 1px solid #9eafc5; border-radius: 7px; margin-bottom: 20px; }
+input:focus, button:focus-visible, a:focus-visible { outline: 3px solid #91bbf0; outline-offset: 3px; }
+.options { display: flex; gap: 32px; align-items: center; }
+.options > div { max-width: 230px; }
+.checkbox { display: flex; gap: 10px; align-items: center; font-weight: 450; }
+input[type=checkbox] { width: 18px; height: 18px; accent-color: #195cbc; }
+.hint { margin-top: 0; font-size: .875rem; }
+.buttons { display: flex; gap: 12px; }
+button { border: 1px solid #195cbc; background: #195cbc; color: white; padding: 11px 20px; border-radius: 7px; font: inherit; font-weight: 650; cursor: pointer; }
+button.secondary { color: #195cbc; background: white; }
+button:disabled { opacity: .5; cursor: not-allowed; }
+#progress { margin-top: 24px; font-weight: 650; }
+.error { color: #882626; background: #fff0ee; border-radius: 7px; padding: 12px; overflow-wrap: anywhere; }
+.result { margin-top: 20px; }
+.result p { margin: 8px 0; }
+.commit { overflow-wrap: anywhere; }
+a { color: #1453a1; }
+details { margin-top: 20px; }
+summary { cursor: pointer; font-weight: 650; }
+pre { background: #12243b; color: #e4edfa; padding: 18px; border-radius: 8px; overflow: auto; white-space: pre-wrap; overflow-wrap: anywhere; font-size: .8rem; }
+footer { margin: 28px 0; font-size: .8rem; }
+@media (max-width: 600px) { main { margin: 24px auto; padding: 0 14px; } form, .result { padding: 18px; } .options { display: block; } .options > div { max-width: none; } }

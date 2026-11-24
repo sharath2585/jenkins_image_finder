@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jenkins Image Finder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <span class="eyebrow">BUILD TRACEABILITY</span>
+      <h1>Jenkins Image Finder</h1>
+      <p>Trace a container image to its branch, commit, and Jenkins build.</p>
+    </header>
+    <aside id="connection" role="status"></aside>
+    <form id="search-form">
+      <label for="job-url">Jenkins job or folder URL</label>
+      <input id="job-url" type="url" placeholder="https://jenkins.example/job/my-service/" required>
+      <label for="image">Image reference or tag</label>
+      <input id="image" placeholder="bms-orchestrator-service:20260820144606" required autocomplete="off">
+      <div class="options">
+        <div>
+          <label for="max-logs">Maximum console logs</label>
+          <input id="max-logs" type="number" min="1" max="5000" step="1" value="200" required>
+        </div>
+        <label class="checkbox"><input id="first-match" type="checkbox" checked> Stop after the first match</label>
+      </div>
+      <p class="hint">Timestamp tags prioritize nearby builds, without excluding other dates. Only retained Jenkins builds can be searched.</p>
+      <div class="buttons">
+        <button id="search" type="submit">Find image</button>
+        <button id="cancel" type="button" class="secondary" disabled>Stop search</button>
+      </div>
+    </form>
+    <section aria-label="Search progress">
+      <p id="progress" role="status" aria-live="polite">Ready to search.</p>
+      <p id="summary"></p>
+      <div id="errors" role="alert"></div>
+    </section>
+    <section id="results" aria-label="Matching builds" aria-live="polite"></section>
+    <footer>No passwords or tokens collected. Requests run in your signed-in Jenkins tab. Results stay in this page.</footer>
+  </main>
+  <script type="module" src="app.mjs"></script>
+</body>
+</html>

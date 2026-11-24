@@ -1,0 +1,9 @@
+{
+  "name": "jenkins-image-finder",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dependency-free Chrome/Edge extension to trace image tags through Jenkins",
+  "scripts": {
+    "test": "node tests.mjs"
+  }
+}
